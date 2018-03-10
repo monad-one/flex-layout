@@ -5,15 +5,12 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {StyleUtils} from '../../core/style-utils/style-utils';
+import {applyCssPrefixes} from '../utils/auto-prefixer';
+import {extendObject} from '../utils/object-extend';
+import {_dom as _} from './dom-tools';
 
 declare var global: any;
 const _global = <any>(typeof window === 'undefined' ? global : window);
-
-import {_dom as _} from './dom-tools';
-
-import {applyCssPrefixes} from '../auto-prefixer';
-import {extendObject} from '../object-extend';
 
 export const expect: (actual: any) => NgMatchers = <any> _global.expect;
 
@@ -205,7 +202,7 @@ export const customMatchers: jasmine.CustomMatcherFactories = {
  * specified DOM element.
  */
 function buildCompareStyleFunction(inlineOnly = true) {
-  return function (actual: any, styles: { [k: string]: string } | string, styler: StyleUtils) {
+  return function (actual: any, styles: { [k: string]: string } | string, styler: any) {
     let found = {};
 
     let allPassed: boolean;

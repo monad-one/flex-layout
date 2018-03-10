@@ -14,7 +14,7 @@ import {filter} from 'rxjs/operators/filter';
 import {BreakPointRegistry} from '../breakpoints/break-point-registry';
 import {MediaChange} from '../media-change';
 import {MatchMedia} from '../match-media/match-media';
-import {mergeAlias} from '../add-alias';
+import {mergeAlias} from '../utils/add-alias';
 import {BreakPoint} from '../breakpoints/break-point';
 
 /**

@@ -16,11 +16,14 @@ import {
   CoreModule,
   MockMatchMedia,
   StylesheetMap,
-  StyleUtils
+  StyleUtils,
+  customMatchers,
+  expect,
+  expectNativeEl,
+  makeCreateTestComponent,
+  queryFor,
 } from '@angular/flex-layout/core';
 
-import {customMatchers, expect} from '../../utils/testing/custom-matchers';
-import {makeCreateTestComponent, expectNativeEl, queryFor} from '../../utils/testing/helpers';
 import {ClassDirective} from './class';
 
 

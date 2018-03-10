@@ -17,16 +17,14 @@ import {
   MockMatchMedia,
   SERVER_TOKEN,
   StyleUtils,
-} from '@angular/flex-layout/core';
-
-import {FlexLayoutModule} from '../../module';
-import {customMatchers} from '../../utils/testing/custom-matchers';
-import {
+  customMatchers,
   makeCreateTestComponent,
   queryFor,
   expectEl,
   expectNativeEl,
-} from '../../utils/testing/helpers';
+} from '@angular/flex-layout/core';
+
+import {FlexLayoutModule} from '../../module';
 
 describe('flex-offset directive', () => {
   let fixture: ComponentFixture<any>;

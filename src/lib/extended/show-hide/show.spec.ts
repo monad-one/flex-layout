@@ -17,11 +17,12 @@ import {
   StylesheetMap,
   SERVER_TOKEN,
   StyleUtils,
+  customMatchers,
+  expectNativeEl,
+  makeCreateTestComponent,
 } from '@angular/flex-layout/core';
 
 import {FlexLayoutModule} from '../../module';
-import {customMatchers} from '../../utils/testing/custom-matchers';
-import {makeCreateTestComponent, expectNativeEl} from '../../utils/testing/helpers';
 
 describe('show directive', () => {
   let fixture: ComponentFixture<any>;

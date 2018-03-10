@@ -13,7 +13,7 @@ const buildVersion = package.version;
  * Required Angular version for all Angular Layout packages. This version will be used
  * as the peer dependency version for Angular in all release packages.
  */
-const angularVersion = '^5.0.0';
+const angularVersion = '>=6.0.0-beta.0 <7.0.0';
 
 /**
  * Required Angular CDK version for all Angular Layout packages. This version will be used

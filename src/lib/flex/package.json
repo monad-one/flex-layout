@@ -1,0 +1,7 @@
+{
+  "name": "@angular/flex-layout/flex",
+  "typings": "./flex.d.ts",
+  "main": "../bundles/flex.umd.js",
+  "module": "../esm5/flex.js",
+  "es2015": "../esm2015/flex.js"
+}

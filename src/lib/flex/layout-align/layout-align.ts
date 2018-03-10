@@ -16,12 +16,18 @@ import {
   SimpleChanges,
   Self,
 } from '@angular/core';
-import {BaseFxDirective, MediaChange, MediaMonitor, StyleUtils} from '@angular/flex-layout/core';
+import {
+  BaseFxDirective,
+  MediaChange,
+  MediaMonitor,
+  StyleUtils,
+  extendObject,
+  isFlowHorizontal,
+  LAYOUT_VALUES,
+} from '@angular/flex-layout/core';
 import {Subscription} from 'rxjs/Subscription';
 
-import {extendObject} from '../../utils/object-extend';
 import {LayoutDirective} from '../layout/layout';
-import {LAYOUT_VALUES, isFlowHorizontal} from '../../utils/layout-validator';
 
 /**
  * 'layout-align' flexbox styling directive

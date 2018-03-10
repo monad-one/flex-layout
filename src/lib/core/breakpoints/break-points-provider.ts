@@ -7,12 +7,11 @@
  */
 import {InjectionToken} from '@angular/core';
 
+import {extendObject} from '../utils/object-extend';
 import {BreakPoint} from './break-point';
 import {BREAKPOINTS} from './break-points-token';
 import {DEFAULT_BREAKPOINTS} from './data/break-points';
 import {ORIENTATION_BREAKPOINTS} from './data/orientation-break-points';
-
-import {extendObject} from '../../utils/object-extend';
 import {mergeByAlias, validateSuffixes} from './breakpoint-tools';
 
 

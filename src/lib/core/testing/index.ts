@@ -6,7 +6,6 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-export * from './auto-prefixer';
-export * from './basis-validator';
-export * from './layout-validator';
-export * from './object-extend';
+export * from './custom-matchers';
+export * from './dom-tools';
+export * from './helpers';

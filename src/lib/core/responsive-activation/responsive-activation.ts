@@ -9,9 +9,9 @@ import {Subscription} from 'rxjs/Subscription';
 import {map} from 'rxjs/operators/map';
 
 import {MediaChange, MediaQuerySubscriber} from '../media-change';
+import {extendObject} from '../utils/object-extend';
 import {BreakPoint} from '../breakpoints/break-point';
 import {MediaMonitor} from '../media-monitor/media-monitor';
-import {extendObject} from '../../utils/object-extend';
 
 export declare type SubscriptionList = Subscription[];
 

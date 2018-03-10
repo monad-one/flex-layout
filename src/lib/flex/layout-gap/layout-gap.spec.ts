@@ -16,11 +16,14 @@ import {
   MockMatchMedia,
   SERVER_TOKEN,
   StyleUtils,
+  customMatchers,
+  expect,
+  expectEl,
+  makeCreateTestComponent,
+  queryFor,
 } from '@angular/flex-layout/core';
 
 import {FlexLayoutModule} from '../../module';
-import {customMatchers, expect} from '../../utils/testing/custom-matchers';
-import {expectEl, makeCreateTestComponent, queryFor} from '../../utils/testing/helpers';
 
 describe('layout-gap directive', () => {
   let fixture: ComponentFixture<any>;

@@ -15,12 +15,14 @@ import {
   MockMatchMedia,
   SERVER_TOKEN,
   StyleUtils,
+  customMatchers,
+  expectNativeEl,
+  expectEl,
+  makeCreateTestComponent,
+  queryFor,
 } from '@angular/flex-layout/core';
 
 import {FlexLayoutModule} from '../../module';
-import {customMatchers} from '../../utils/testing/custom-matchers';
-import {makeCreateTestComponent, expectNativeEl, expectEl} from '../../utils/testing/helpers';
-import {queryFor} from '../../utils/testing/helpers';
 
 describe('layout directive', () => {
   let fixture: ComponentFixture<any>;

@@ -18,12 +18,14 @@ import {
   StylesheetMap,
   SERVER_TOKEN,
   StyleUtils,
+  customMatchers,
+  expect,
+  expectNativeEl,
+  makeCreateTestComponent,
+  NgMatchers,
+  queryFor,
 } from '@angular/flex-layout/core';
 
-import {customMatchers, expect, NgMatchers} from '../../utils/testing/custom-matchers';
-import {
-  makeCreateTestComponent, expectNativeEl, queryFor
-} from '../../utils/testing/helpers';
 import {ShowHideDirective} from './show-hide';
 
 

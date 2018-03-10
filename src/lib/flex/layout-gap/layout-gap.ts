@@ -18,11 +18,16 @@ import {
   NgZone,
 } from '@angular/core';
 import {Directionality} from '@angular/cdk/bidi';
-import {BaseFxDirective, MediaChange, MediaMonitor, StyleUtils} from '@angular/flex-layout/core';
+import {
+  BaseFxDirective,
+  MediaChange,
+  MediaMonitor,
+  StyleUtils,
+  LAYOUT_VALUES,
+} from '@angular/flex-layout/core';
 import {Subscription} from 'rxjs/Subscription';
 
 import {LayoutDirective} from '../layout/layout';
-import {LAYOUT_VALUES} from '../../utils/layout-validator';
 
 /**
  * 'layout-padding' styling directive

@@ -13,12 +13,11 @@ import {
   SimpleChange,
 } from '@angular/core';
 
-import {buildLayoutCSS} from '../../utils/layout-validator';
+import {buildLayoutCSS} from '../utils/layout-validator';
 import {
   StyleDefinition,
   StyleUtils,
 } from '../style-utils/style-utils';
-
 import {ResponsiveActivation, KeyOptions} from '../responsive-activation/responsive-activation';
 import {MediaMonitor} from '../media-monitor/media-monitor';
 import {MediaQuerySubscriber} from '../media-change';

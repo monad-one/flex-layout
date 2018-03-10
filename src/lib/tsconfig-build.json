@@ -1,28 +1,30 @@
-// TypeScript config file that is used to compile the library into ES2015.
 {
   "compilerOptions": {
     "declaration": true,
     "stripInternal": false,
-    "experimentalDecorators": true,
-    "noUnusedParameters": true,
+    "noImplicitAny": false,
     "strictNullChecks": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "module": "es2015",
+    "target": "es2015",
+    "lib": ["es2015", "dom"],
+    "skipLibCheck": true,
+    "types": ["jasmine", "tslib"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "baseUrl": ".",
+    "noUnusedParameters": true,
     "importHelpers": true,
     "newLine": "lf",
-    "module": "es2015",
-    "moduleResolution": "node",
     "outDir": "../../dist/packages/flex-layout",
     "rootDir": ".",
     "rootDirs": [
       ".",
       "../../dist/packages/flex-layout"
     ],
-    "sourceMap": true,
-    "inlineSources": true,
-    "target": "es2015",
-    "lib": ["es2015", "dom"],
-    "skipLibCheck": true,
-    "types": [],
-    "baseUrl": ".",
     "paths": {
       "@angular/flex-layout/*": ["../../dist/packages/flex-layout/*"]
     }
@@ -33,10 +35,13 @@
   ],
   "angularCompilerOptions": {
     "annotateForClosureCompiler": true,
-    "strictMetadataEmit": true,
+    "strictMetadataEmit": false, // Workaround for Angular #22210
     "flatModuleOutFile": "index.js",
     "flatModuleId": "@angular/flex-layout",
     "skipTemplateCodegen": true,
     "fullTemplateTypeCheck": true
+  },
+  "bazelOptions": {
+    "suppressTsconfigOverrideWarnings": true
   }
 }

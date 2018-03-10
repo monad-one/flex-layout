@@ -16,18 +16,17 @@ import {
   MockMatchMedia,
   SERVER_TOKEN,
   StyleUtils,
+  customMatchers,
+  expect,
+  expectNativeEl,
+  makeCreateTestComponent,
+  queryFor,
+  expectEl,
 } from '@angular/flex-layout/core';
 
 import {FlexLayoutModule} from '../../module';
 import {FlexDirective} from './flex';
 import {LayoutDirective} from '../layout/layout';
-import {customMatchers, expect} from '../../utils/testing/custom-matchers';
-import {
-  makeCreateTestComponent,
-  expectNativeEl,
-  queryFor,
-  expectEl,
-} from '../../utils/testing/helpers';
 
 
 describe('flex directive', () => {

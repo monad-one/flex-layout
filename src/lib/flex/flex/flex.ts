@@ -16,13 +16,18 @@ import {
   SimpleChanges,
   SkipSelf,
 } from '@angular/core';
-import {BaseFxDirective, MediaChange, MediaMonitor, StyleUtils} from '@angular/flex-layout/core';
+import {
+  BaseFxDirective,
+  extendObject,
+  isFlowHorizontal,
+  MediaChange,
+  MediaMonitor,
+  StyleUtils,
+} from '@angular/flex-layout/core';
 import {Subscription} from 'rxjs/Subscription';
 
-import {extendObject} from '../../utils/object-extend';
 import {LayoutDirective} from '../layout/layout';
-import {validateBasis} from '../../utils/basis-validator';
-import {isFlowHorizontal} from '../../utils/layout-validator';
+import {validateBasis} from './basis-validator';
 
 
 /** Built-in aliases for different flex-basis values. */

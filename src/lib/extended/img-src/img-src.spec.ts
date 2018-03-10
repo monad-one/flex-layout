@@ -15,13 +15,15 @@ import {
   MockMatchMedia,
   SERVER_TOKEN,
   StyleUtils,
+  customMatchers,
+  expect,
+  _dom as _,
+  expectEl,
+  makeCreateTestComponent,
+  queryFor,
 } from '@angular/flex-layout/core';
 
 import {FlexLayoutModule} from '../../module';
-import {customMatchers} from '../../utils/testing/custom-matchers';
-import {expectEl, makeCreateTestComponent, queryFor} from '../../utils/testing/helpers';
-import {expect} from '../../utils/testing/custom-matchers';
-import {_dom as _} from '../../utils/testing/dom-tools';
 
 const SRC_URLS = {
   'xs': [

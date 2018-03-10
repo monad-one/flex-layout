@@ -1,5 +1,13 @@
 {
   "extends": "../tsconfig-build",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "../../../dist/packages/flex-layout",
+    "rootDir": "../",
+    "paths": {
+      "@angular/flex-layout/*": ["../../../dist/packages/flex-layout/*"]
+    }
+  },
   "files": [
     "public-api.ts",
     "../typings.d.ts"

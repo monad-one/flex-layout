@@ -1,0 +1,7 @@
+{
+  "name": "@angular/flex-layout/server",
+  "typings": "./server.d.ts",
+  "main": "../bundles/server.umd.js",
+  "module": "../esm5/server.js",
+  "es2015": "../esm2015/server.js"
+}

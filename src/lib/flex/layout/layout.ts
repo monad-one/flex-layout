@@ -14,11 +14,16 @@ import {
   OnDestroy,
   SimpleChanges,
 } from '@angular/core';
-import {BaseFxDirective, MediaChange, MediaMonitor, StyleUtils} from '@angular/flex-layout/core';
+import {
+  BaseFxDirective,
+  buildLayoutCSS,
+  MediaChange,
+  MediaMonitor,
+  StyleUtils,
+} from '@angular/flex-layout/core';
 import {Observable} from 'rxjs/Observable';
 import {ReplaySubject} from 'rxjs/ReplaySubject';
 
-import {buildLayoutCSS} from '../../utils/layout-validator';
 
 /**
  * 'layout' flexbox styling directive

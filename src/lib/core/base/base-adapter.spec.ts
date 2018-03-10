@@ -6,8 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 import {ElementRef} from '@angular/core';
+
+import {expect} from '../testing/custom-matchers';
 import {BaseFxDirectiveAdapter} from './base-adapter';
-import {expect} from '../../utils/testing/custom-matchers';
 import {MediaMonitor} from '../media-monitor/media-monitor';
 import {StyleUtils} from '../style-utils/style-utils';
 

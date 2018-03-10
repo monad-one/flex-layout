@@ -16,14 +16,14 @@ import {
   MockMatchMedia,
   StylesheetMap,
   StyleUtils,
+  customMatchers,
+  expect,
+  expectNativeEl,
+  makeCreateTestComponent,
 } from '@angular/flex-layout/core';
 import {LayoutDirective} from '@angular/flex-layout/flex';
 
 import {StyleDirective} from './style';
-import {customMatchers} from '../../utils/testing/custom-matchers';
-import {
-  makeCreateTestComponent, expectNativeEl
-} from '../../utils/testing/helpers';
 
 describe('style directive', () => {
   let fixture: ComponentFixture<any>;

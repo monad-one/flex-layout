@@ -73,7 +73,7 @@ export abstract class ObservableMedia implements Subscribable<MediaChange> {
  *    }
  *  }
  */
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class MediaService implements ObservableMedia {
   /**
    * Should we announce gt-<xxx> breakpoint activations ?
@@ -183,4 +183,7 @@ export class MediaService implements ObservableMedia {
   private observable$: Observable<MediaChange>;
 }
 
-
+export const ObservableMediaProvider = { // tslint:disable-line:variable-name
+  provide: ObservableMedia,
+  useClass: MediaService
+};

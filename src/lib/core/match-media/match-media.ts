@@ -20,7 +20,7 @@ import {MediaChange} from '../media-change';
  *
  * NOTE: both mediaQuery activations and de-activations are announced in notifications
  */
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class MatchMedia {
   protected _registry: Map<string, MediaQueryList>;
   protected _source: BehaviorSubject<MediaChange>;

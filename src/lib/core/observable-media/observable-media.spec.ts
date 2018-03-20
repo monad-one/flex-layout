@@ -11,12 +11,10 @@ import {map} from 'rxjs/operators/map';
 
 import {BreakPoint} from '../breakpoints/break-point';
 import {BREAKPOINTS} from '../breakpoints/break-points-token';
-import {BreakPointRegistry} from '../breakpoints/break-point-registry';
-import {BREAKPOINTS_PROVIDER} from '../breakpoints/break-points-provider';
 import {MatchMedia} from '../match-media/match-media';
 import {MediaChange} from '../media-change';
 import {ObservableMedia} from './observable-media';
-import {OBSERVABLE_MEDIA_PROVIDER} from './observable-media-provider';
+import {ObservableMediaProvider} from './observable-media';
 import {MockMatchMediaProvider} from '../match-media/mock/mock-match-media';
 import {BREAKPOINT} from '../tokens/breakpoint-token';
 
@@ -33,12 +31,7 @@ describe('observable-media', () => {
     beforeEach(() => {
       // Configure testbed to prepare services
       TestBed.configureTestingModule({
-        providers: [
-          BREAKPOINTS_PROVIDER,
-          BreakPointRegistry,   // Registry of known/used BreakPoint(s)
-          MockMatchMediaProvider,
-          OBSERVABLE_MEDIA_PROVIDER,
-        ]
+        providers: [MockMatchMediaProvider, ObservableMediaProvider]
       });
     });
     beforeEach(inject([BREAKPOINTS], (breakpoints: BreakPoint[]) => {
@@ -192,11 +185,9 @@ describe('observable-media', () => {
       // Configure testbed to prepare services
       TestBed.configureTestingModule({
         providers: [
-          BreakPointRegistry,   // Registry of known/used BreakPoint(s)
           MockMatchMediaProvider,
-          BREAKPOINTS_PROVIDER,
           {provide: BREAKPOINT, useValue: CUSTOM_BREAKPOINTS, multi: true},
-          OBSERVABLE_MEDIA_PROVIDER,
+          ObservableMediaProvider,
         ]
       });
     });

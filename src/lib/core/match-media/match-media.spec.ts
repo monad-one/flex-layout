@@ -12,11 +12,10 @@ import {TestBed, inject, async} from '@angular/core/testing';
 import {MediaChange} from '../media-change';
 import {BreakPoint} from '../breakpoints/break-point';
 import {MockMatchMedia, MockMatchMediaProvider} from './mock/mock-match-media';
-import {BREAKPOINTS_PROVIDER} from '../breakpoints/break-points-provider';
 import {BreakPointRegistry} from '../breakpoints/break-point-registry';
 import {MatchMedia} from './match-media';
 import {ObservableMedia} from '../observable-media/observable-media';
-import {OBSERVABLE_MEDIA_PROVIDER} from '../observable-media/observable-media-provider';
+import {ObservableMediaProvider} from '../observable-media/observable-media';
 
 describe('match-media', () => {
   let matchMedia: MockMatchMedia;
@@ -24,11 +23,7 @@ describe('match-media', () => {
   beforeEach(() => {
     // Configure testbed to prepare services
     TestBed.configureTestingModule({
-      providers: [
-        BreakPointRegistry,           // Registry of known/used BreakPoint(s)
-        BREAKPOINTS_PROVIDER, // Supports developer overrides of list of known breakpoints
-        {provide: MatchMedia, useClass: MockMatchMedia}
-      ]
+      providers: [MockMatchMediaProvider]
     });
   });
 
@@ -124,12 +119,7 @@ describe('match-media-observable', () => {
   beforeEach(() => {
     // Configure testbed to prepare services
     TestBed.configureTestingModule({
-      providers: [
-        BREAKPOINTS_PROVIDER,  // Supports developer overrides of list of known breakpoints
-        BreakPointRegistry,   // Registry of known/used BreakPoint(s)
-        OBSERVABLE_MEDIA_PROVIDER,  // injectable `media$` matchMedia observable
-        MockMatchMediaProvider,
-      ]
+      providers: [MockMatchMediaProvider, ObservableMediaProvider]
     });
   });
 

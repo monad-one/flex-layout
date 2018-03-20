@@ -30,7 +30,7 @@ import {mergeAlias} from '../add-alias';
  *  - provides accessor to the currently active BreakPoint
  *  - publish list of overlapping BreakPoint(s); used by ResponsiveActivation
  */
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class MediaMonitor {
   constructor(private _breakpoints: BreakPointRegistry, private _matchMedia: MatchMedia) {
     this._registerBreakpoints();
